@@ -11,13 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('banke', function (Blueprint $table) {
-            $table->id();
-            $table->string('naziv');
-            $table->string('adresa');
-            $table->string('email')->unique();
-            $table->string('sajt');
-            $table->timestamps();
+        Schema::table('transakcije', function (Blueprint $table) {
+            $table->dropColumn('vreme');
         });
     }
 
@@ -26,6 +21,10 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('banke');
+        Schema::table('transakcije', function (Blueprint $table) {
+            $table->after('korisnik', function ($table) {
+                $table->timestamp('vreme');
+            });
+        });
     }
 };

@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('banke', function (Blueprint $table) {
-            $table->id();
-            $table->string('naziv');
-            $table->string('adresa');
-            $table->string('email')->unique();
-            $table->string('sajt');
-            $table->timestamps();
+        Schema::table('banke', function (Blueprint $table) {
+            $table->after('sajt', function ($table) {
+                $table->string('broj_telefona')->nullable();
+            });
         });
     }
 
@@ -26,6 +23,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('banke');
+        Schema::table('banke', function (Blueprint $table) {
+            $table->dropColumn('broj_telefona');
+        });
     }
 };

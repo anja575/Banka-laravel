@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('ime');
             $table->string('prezime');
-            $table->string('email');
-            $table->string('brojTelefona');
+            $table->string('email_adresa')->unique();
+            $table->string('broj_telefona');
             $table->string('pozicija');
             $table->foreignId('banka_id');
             $table->timestamps();

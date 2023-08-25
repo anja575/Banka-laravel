@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Banka;
+use App\Models\Transakcija;
 
 class Radnik extends Model
 {
@@ -13,7 +15,7 @@ class Radnik extends Model
         'ime',
         'prezime',
         'email',
-        'brojTelefona',
+        'broj_telefona',
         'pozicija',
         'banka_id'
        ];

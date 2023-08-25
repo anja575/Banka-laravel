@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Radnik;
 
 class Banka extends Model
 {
@@ -13,8 +14,8 @@ class Banka extends Model
         'naziv',
         'adresa',
         'email',
-        'website',
-        'brojTelefona'
+        'sajt',
+        'broj_telefona'
     ];
 
     public function radnici(){
