@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('adresa');
             $table->string('email')->unique();
             $table->string('sajt');
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }

@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\User;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Banka>
@@ -21,7 +22,8 @@ class BankaFactory extends Factory
             'adresa' => $this->faker->unique()->streetAddress(),
             'email' => $this->faker->unique()->companyEmail(),
             'sajt' => $this->faker->unique()->url(),
-            'broj_telefona' => $this->faker->unique()->phoneNumber()
+            'broj_telefona' => $this->faker->unique()->phoneNumber(),
+            'user_id' => User::factory()
         ];
     }
 }

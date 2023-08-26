@@ -13,6 +13,6 @@ class BankaSeeder extends Seeder
      */
     public function run(): void
     {
-        Banka::factory(4)->create();
+        Banka::factory()->create();
     }
 }

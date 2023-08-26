@@ -17,8 +17,6 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
-        User::factory()->create();
-
         $banka = new BankaSeeder();
         $radnik = new RadnikSeeder();
         $transakcija = new TransakcijaSeeder();

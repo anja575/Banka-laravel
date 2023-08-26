@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Radnik;
-use App\Models\Banka;
 
 class RadnikSeeder extends Seeder
 {
@@ -14,6 +13,6 @@ class RadnikSeeder extends Seeder
      */
     public function run(): void
     {
-        Radnik::factory(7)->create();
+        Radnik::factory(3)->create();
     }
 }
