@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Resources\RadnikResource;
 use App\Http\Resources\Radni;
+use App\Http\Resources\RadniciCollection;
 
 class RadnikController extends Controller
 {
