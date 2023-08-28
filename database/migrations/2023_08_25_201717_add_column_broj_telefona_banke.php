@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('banke', function (Blueprint $table) {
             $table->after('sajt', function ($table) {
-                $table->string('broj_telefona')->nullable();
+                $table->string('broj_telefona');
             });
         });
     }
